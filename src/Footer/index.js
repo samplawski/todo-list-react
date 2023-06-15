@@ -9,12 +9,12 @@ const Footer = () => (
                 className="footer__link"
                 href="mailto:tsamplawski@gmail.com"
                 title="tworzy wiadomość zaadresowaną do mnie"
-            >wyślij do mnie wiadomość</a
-            >
+            >wyślij do mnie wiadomość
+            </a>
         </p>
         <p>
             <a
-                href="https://github.com/samplawski/simple-to-do-list"
+                href="https://github.com/samplawski/todo-list-react"
                 title="otwiera stronę projektu na GitHub"
                 rel="noreferrer noopener"
                 target="_blank"

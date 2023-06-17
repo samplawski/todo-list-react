@@ -72,7 +72,7 @@ The project was created by Tomasz Sampławski and is still in build (the interac
 If you wish to contact me, you can email me at tsamplawski@gmail.com.
 
 
-## How to Ggt started with Create React App
+## How to get started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

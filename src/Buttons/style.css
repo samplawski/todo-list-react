@@ -20,6 +20,7 @@
 
 .section__headingButton:hover {
     color: hsl(180, 100%, 30%);
+    cursor: pointer;
 }
 
 .section__headingButton:active {

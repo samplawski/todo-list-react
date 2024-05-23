@@ -17,7 +17,7 @@ const TasksList = (props) => (
                 </span>
 
                 <button className="tasksList__button tasksList__button--remove">
-                    🗑️
+                    🧺
                 </button>
 
             </li>

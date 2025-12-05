@@ -19,13 +19,27 @@ const getInitialTasks = () => {
     : defaultTasks;
 };
 
+const hideDoneKey = "hideDone";
+
+const getHideDoneInitialState = () => {
+  const hideDoneStateFromLocalStorage = localStorage.getItem(hideDoneKey);
+  if (hideDoneStateFromLocalStorage === "true") {
+    return true;
+  }
+  return false;
+};
+
 function App() {
-  const [hideDone, setHideDone] = useState(false);
+  const [hideDone, setHideDone] = useState(getHideDoneInitialState);
   const [tasks, setTasks] = useState(getInitialTasks);
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
+
+  useEffect(() => {
+    localStorage.setItem(hideDoneKey, hideDone.toString());
+  }, [hideDone]);
 
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);

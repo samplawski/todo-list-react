@@ -1,10 +1,3 @@
-import React from "react";
-import { Main } from "./styled.js";
-
-const Container = ({ children }) => (
-    <Main>
-        {children}
-    </Main>
-);
+import { Container } from "./styled.js";
 
 export default Container;

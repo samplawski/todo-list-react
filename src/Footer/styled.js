@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const StyledFooter = styled.footer`
   overflow-x: auto;
-  background-color: hsl(0, 100%, 99%);
+  background-color: ${({ theme }) => theme.color.footerBackground};
   margin: 30px auto 10px;
   padding: 10px 20px;
   display: flex;
@@ -13,14 +13,16 @@ export const StyledFooter = styled.footer`
   font-size: 15px;
   letter-spacing: 0.1em;
   flex-wrap: wrap;
+  gap: 10px;
 `;
 
 export const Link = styled.a`
-  color: hsl(182, 25%, 50%);
+  color: ${({ theme }) => theme.color.footerLink};
   text-decoration: none;
+  transition: ${({ theme }) => theme.transition.time};
 
   &:hover {
-    color: hsl(182, 25%, 35%);
+    filter: brightness(80%);
     border-bottom: 1px solid;
     outline: none;
   }

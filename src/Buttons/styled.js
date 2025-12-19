@@ -5,7 +5,7 @@ export const StyledButtons = styled.div`
   grid-template-columns: auto auto;
   grid-gap: 20px;
 
-  @media (max-width: 767px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
     grid-template-columns: 1fr;
   }
 `;
@@ -14,20 +14,20 @@ export const HeadingButton = styled.button`
   display: inline;
   background: none;
   border: none;
-  color: hsl(180, 100%, 25%);
-  transition: 0.2s;
+  color: ${({ theme }) => theme.color.taskButton};
+  transition: ${({ theme }) => theme.transition.time};
 
   &:hover {
-    color: hsl(180, 100%, 30%);
+    filter: brightness(120%);
     cursor: pointer;
   }
 
   &:active {
-    color: hsl(180, 100%, 35%);
+    filter: brightness(140%);
   }
 
   &:disabled {
-    color: hsl(0, 0%, 67%);
+    color: ${({ theme }) => theme.color.disabledButton};
     cursor: auto;
   }
 `;

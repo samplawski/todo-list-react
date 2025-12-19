@@ -13,7 +13,7 @@ html {
 
 body { 
     font-family: 'Montserrat', sans-serif;
-    background-color: hsl(0, 0%, 87%);
+    background-color: ${({ theme }) => theme.color.background};
     overflow-wrap: anywhere;
 }
 `;

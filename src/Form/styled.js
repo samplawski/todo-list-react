@@ -5,30 +5,30 @@ export const StyledForm = styled.form`
   grid-template-columns: 1fr auto;
   grid-gap: 20px;
 
-  @media (max-width: 767px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
     grid-template-columns: 1fr;
   }
 `;
 
 export const Input = styled.input`
   padding: 10px;
-  border: 1px solid hsl(0, 0%, 87%);
+  border: 1px solid ${({ theme }) => theme.color.border};
 `;
 
 export const Button = styled.button`
-  color: hsl(0, 0%, 100%);
-  background: hsl(180, 100%, 25%);
+  color: ${({ theme }) => theme.color.buttonText};
+  background: ${({ theme }) => theme.color.taskButton};
   padding: 10px;
   border: none;
-  transition: 0.5s;
+  transition: ${({ theme }) => theme.transition.time};
 
   &:hover {
-    background: hsl(180, 100%, 30%);
+    filter: brightness(120%);
     transform: scale(1.1);
     cursor: pointer;
   }
 
   &:active {
-    background: hsl(180, 100%, 35%);
+    filter: brightness(140%);
   }
 `;

@@ -12,48 +12,45 @@ export const Item = styled.li`
   grid-gap: 10px;
   align-items: center;
   padding: 10px;
-  border-bottom: 1px solid hsl(0, 0%, 87%);
+  border-bottom: 1px solid ${({ theme }) => theme.color.border};
 
-  ${({ $hidden }) => $hidden && css`
+  ${({ $hidden }) =>
+    $hidden &&
+    css`
       display: none;
     `}
 `;
 
 export const Content = styled.span`
-  ${({ $done }) => $done && css`
+  ${({ $done }) =>
+    $done &&
+    css`
       text-decoration: line-through;
     `}
 `;
 
 export const Button = styled.button`
   border: none;
-  color: hsl(0, 0%, 100%);
+  color: ${({ theme }) => theme.color.buttonText};
   width: 30px;
   height: 30px;
   padding: 0px;
-  transition: 0.3s;
+  transition: ${({ theme }) => theme.transition.time};
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(120%);
+  }
+
+  &:active {
+    filter: brightness(140%);
+  }
 
   ${({ $toggleDone }) => $toggleDone && css`
-      background: hsl(120, 61%, 34%);
-
-      &:hover {
-        background: hsl(120, 61%, 44%);
-      }
-
-      &:active {
-        background: hsl(120, 61%, 54%);
-      }
+      background: ${({ theme }) => theme.color.toggleDoneButton};
     `}
 
   ${({ $remove }) => $remove && css`
-      background: hsl(348, 83%, 47%);
-
-      &:hover {
-        background: hsl(348, 83%, 57%);
-      }
-
-      &:active {
-        background: hsl(348, 83%, 67%);
-      }
+      background: ${({ theme }) => theme.color.deleteButton};
     `}
 `;

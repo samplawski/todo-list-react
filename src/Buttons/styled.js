@@ -17,12 +17,12 @@ export const HeadingButton = styled.button`
   color: ${({ theme }) => theme.color.taskButton};
   transition: ${({ theme }) => theme.transition.time};
 
-  &:hover {
+  &:hover:not(:disabled) {
     filter: brightness(120%);
     cursor: pointer;
   }
 
-  &:active {
+  &:active:not(:disabled) {
     filter: brightness(140%);
   }
 

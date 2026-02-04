@@ -6,7 +6,6 @@ import { theme } from "./theme";
 import reportWebVitals from "./reportWebVitals";
 import { GlobalStyle } from "./GlobalStyle";
 import App from "./App";
-// import { addTask } from "./features/tasks/tasksSlice";
 import store from "./store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

@@ -1,6 +1,6 @@
 # To-do List in React
 
-This is a simple task management application built with React. It allows users to add, remove, and toggle tasks, with persistent data storage and a fully responsive interface. This project is a comprehensive refactoring of an original Vanilla JavaScript application into a modern, component-based React architecture.
+This is a simple task management application built with React and Redux Toolkit. It allows users to add, remove, and toggle tasks, with persistent data storage and a fully responsive interface. This project is a comprehensive refactoring of an original Vanilla JavaScript application, via  a component-based React architecture, through a Custom Hook-based, into a centralized state management system using Redux.
 
 You can try the application here: [Live Demo](https://samplawski.github.io/todo-list-react/)
 
@@ -8,10 +8,11 @@ You can try the application here: [Live Demo](https://samplawski.github.io/todo-
 
 ## 1. Short Description
 
-The Task List application focuses on clean code, modular architecture, and advanced state management. It demonstrates the use of Styled Components for styling and Custom Hooks for separating business logic from the UI layer.
+The Task List application focuses on clean code, modular architecture, and advanced state management. It demonstrates the power of Redux Toolkit for handling global state, Styled Components for dynamic styling, and Custom Selectors for optimized data access.
 
 ## 2. Features
 
+- **Global State Management**: Powered by Redux Toolkit for predictable and centralized data flow.
 - **Data Persistence**: Tasks are automatically saved to and loaded from Local Storage.
 - **State Management**: Advanced task management (add, remove, toggle status, set all as done).
 - **Filtering**: Ability to hide or show completed tasks.
@@ -21,13 +22,17 @@ The Task List application focuses on clean code, modular architecture, and advan
 
 ## 3. Technologies Used
 
-- **React 18** (Functional components)
+- **React 18** (Functional components, Hooks)
+- **Redux Toolkit**:
+  - createSlice for logic encapsulation,
+  - configureStore for central store setup,
+  - useSelector & useDispatch for component-store communication,
+  - Custom Selectors for derived state logic.
 - **Styled Components** (CSS-in-JS, ThemeProvider, GlobalStyles)
 - **React Hooks**:
   - `useState` for local component state.
   - `useEffect` for Local Storage synchronization.
   - `useRef` for DOM manipulation (auto-focus).
-  - **Custom Hook** (`useTasks`) for encapsulated business logic.
 - **JavaScript ES6+**
 - **HTML5 & CSS3** (via Styled Components and Normalize.css)
 

@@ -22,11 +22,11 @@ The Task List application focuses on clean code, modular architecture, and advan
 
 ## 3. Technologies Used
 
-- **React 18** (Functional components, Hooks)
+- **React 19** (Functional components, Hooks)
 - **Redux Toolkit**:
-  - createSlice for logic encapsulation,
-  - configureStore for central store setup,
-  - useSelector & useDispatch for component-store communication,
+  - 'createSlice' for logic encapsulation,
+  - 'configureStore' for central store setup,
+  - 'useSelector' & 'useDispatch' for component-store communication,
   - Custom Selectors for derived state logic.
 - **Styled Components** (CSS-in-JS, ThemeProvider, GlobalStyles)
 - **React Hooks**:

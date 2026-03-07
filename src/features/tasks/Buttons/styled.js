@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const StyledButtons = styled.div`
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 20px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
   }
 `;
 
@@ -29,5 +31,17 @@ export const HeadingButton = styled.button`
   &:disabled {
     color: ${({ theme }) => theme.color.disabledButton};
     cursor: auto;
+  }
+
+  &:first-child {
+    width: 100%;
+    text-align: right;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+    &:first-child {
+      text-align: center;
+      width: 100%;
+    }
   }
 `;

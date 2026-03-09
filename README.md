@@ -1,6 +1,6 @@
 # To-do List in React
 
-This is a simple task management application built with React and Redux Toolkit. It allows users to add, remove, and toggle tasks, with persistent data storage and a fully responsive interface. This project is a comprehensive refactoring of an original Vanilla JavaScript application, via  a component-based React architecture, through a Custom Hook-based, into a centralized state management system using Redux.
+This is a simple task management application built with **React 19** and **Redux Toolkit**, featuring asynchronous data handling with **Redux-Saga**. The project demonstrates a modern approach to state management, side-effect handling, and persistent data storage. It allows users to add, remove, and toggle tasks, with persistent data storage and a fully responsive interface. This project is a comprehensive refactoring of an original Vanilla JavaScript application, via  a component-based React architecture, through a Custom Hook-based, into a centralized state management system using Redux.
 
 You can try the application here: [Live Demo](https://samplawski.github.io/todo-list-react/)
 
@@ -13,7 +13,9 @@ The Task List application focuses on clean code, modular architecture, and advan
 ## 2. Features
 
 - **Global State Management**: Powered by Redux Toolkit for predictable and centralized data flow.
+- **Asynchronous Operations**: Uses **Redux-Saga** to handle side effects, such as fetching example tasks from a JSON file.
 - **Data Persistence**: Tasks are automatically saved to and loaded from Local Storage.
+- **Dynamic ID Generation**: Uses `nanoid` to ensure unique identifiers for all tasks, even when fetched from external sources.
 - **State Management**: Advanced task management (add, remove, toggle status, set all as done).
 - **Filtering**: Ability to hide or show completed tasks.
 - **Responsive Design**: Fully optimized for both desktop and mobile devices.
@@ -33,6 +35,7 @@ The Task List application focuses on clean code, modular architecture, and advan
   - `useState` for local component state.
   - `useEffect` for Local Storage synchronization.
   - `useRef` for DOM manipulation (auto-focus).
+- **Redux-Saga**: Middleware for handling complex asynchronous side effects.
 - **JavaScript ES6+**
 - **HTML5 & CSS3** (via Styled Components and Normalize.css)
 

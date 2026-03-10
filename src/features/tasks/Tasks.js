@@ -3,6 +3,7 @@ import Header from "../../common/Header";
 import Section from "../../common/Section";
 import Form from "./Form";
 import TasksList from "./TasksList";
+import ExampleTasksButton from "./ExampleTasksButton";
 import Buttons from "./Buttons";
 import Footer from "../../common/Footer";
 
@@ -11,7 +12,11 @@ function Tasks() {
     <Container>
       <Header title="Lista zadań" />
 
-      <Section title="Dodaj nowe zadanie" body={<Form />} />
+      <Section
+        title="Dodaj nowe zadanie"
+        extraHeaderContent={<ExampleTasksButton />}
+        body={<Form />}
+      />
 
       <Section
         title="Lista zadań"

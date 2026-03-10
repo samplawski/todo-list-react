@@ -5,7 +5,7 @@ import {
   selectHideDone,
   selectAreTasksEmpty,
   selectIsEveryTaskDone,
-  fetchExampleTasks,
+  removeAllTasks
 } from "../tasksSlice.js";
 import { StyledButtons, HeadingButton } from "./styled.js";
 
@@ -18,12 +18,12 @@ function Buttons() {
 
   return (
     <StyledButtons>
-      <HeadingButton onClick={() => dispatch(fetchExampleTasks())}>
-        Pobierz przykładowe zadania
-      </HeadingButton>
-
       {!areTasksEmpty && (
         <>
+          <HeadingButton onClick={() => dispatch(removeAllTasks())}>
+            Usuń wszystkie
+          </HeadingButton>
+
           <HeadingButton onClick={() => dispatch(toggleHideDone())}>
             {hideDone ? "Pokaż" : "Ukryj"} ukończone
           </HeadingButton>

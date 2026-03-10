@@ -6,6 +6,7 @@ const tasksSlice = createSlice({
   initialState: {
     tasks: getTasksInLocalStorage(),
     hideDone: false,
+    loading: false,
   },
 
   reducers: {
@@ -50,6 +51,10 @@ const tasksSlice = createSlice({
       state.tasks = state.tasks.filter((task) => task.id !== action.payload);
     },
 
+    removeAllTasks: (state) => {
+      state.tasks = [];
+    },
+
     // Głęboka destrukturyzacja
     // removeTask: ({ tasks }, { payload: taskId }) => {
     //   const index = tasks.findIndex(({ id }) => id === taskId);
@@ -64,10 +69,13 @@ const tasksSlice = createSlice({
     //   }
     // },
 
-    fetchExampleTasks: () => {},
+    fetchExampleTasks: (state) => {
+      state.loading = true;
+    },
 
     setTasks: (state, { payload: tasks }) => {
       state.tasks = tasks;
+      state.loading = false;
     },
   },
 });
@@ -80,14 +88,16 @@ export const {
   removeTask,
   fetchExampleTasks,
   setTasks,
+  removeAllTasks,
 } = tasksSlice.actions;
 
-export const selectTasksState = (state) =>
-  state.tasks; /* cały obiekt stanu "tasks": { tasks: [], hideDone: false } */
+export const selectTasksState = (state) => state.tasks; /* cały obiekt stanu "tasks": { tasks: [], hideDone: false } */
 
 export const selectTasks = (state) => selectTasksState(state).tasks; /* tylko tablica zadań: [] */
 export const selectHideDone = (state) => selectTasksState(state).hideDone; /* tylko flaga hideDone: false */
 export const selectAreTasksEmpty = (state) => selectTasks(state).length === 0; /* sprawdza, czy są jakieś zadania (długość tablicy (selectTasks)) */
 export const selectIsEveryTaskDone = (state) => selectTasks(state).every(({ done }) => done); /* wywołuje .every() na [] (selectTasks) - sprawdza, czy wszystkie są ukończone */
+
+export const selectLoading = (state) => selectTasksState(state).loading;
 
 export default tasksSlice.reducer;

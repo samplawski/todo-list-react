@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledButtons = styled.div`
+export const StyledExampleTasksButton = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -12,7 +12,7 @@ export const StyledButtons = styled.div`
   }
 `;
 
-export const HeadingButton = styled.button`
+export const HeadingExampleTasksButton = styled.button`
   display: inline;
   background: none;
   border: none;

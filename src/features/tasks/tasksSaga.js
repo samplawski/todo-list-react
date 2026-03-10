@@ -23,6 +23,7 @@ function* fetchExmapleTasksHandler() {
     yield put(setTasks(tasksWithNewIds));
   } catch (error) {
     yield call(alert, "Coś poszło nie tak!");
+    yield put(setTasks([]));
   }
 }
 

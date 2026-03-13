@@ -91,13 +91,37 @@ export const {
   removeAllTasks,
 } = tasksSlice.actions;
 
-export const selectTasksState = (state) => state.tasks; /* cały obiekt stanu "tasks": { tasks: [], hideDone: false } */
+export const selectTasksState = (state) => state.tasks;
+/* cały obiekt stanu "tasks": { tasks: [], hideDone: false } */
 
-export const selectTasks = (state) => selectTasksState(state).tasks; /* tylko tablica zadań: [] */
-export const selectHideDone = (state) => selectTasksState(state).hideDone; /* tylko flaga hideDone: false */
-export const selectAreTasksEmpty = (state) => selectTasks(state).length === 0; /* sprawdza, czy są jakieś zadania (długość tablicy (selectTasks)) */
-export const selectIsEveryTaskDone = (state) => selectTasks(state).every(({ done }) => done); /* wywołuje .every() na [] (selectTasks) - sprawdza, czy wszystkie są ukończone */
+export const selectTasks = (state) => selectTasksState(state).tasks;
+/* tylko tablica zadań: [] */
+
+export const selectHideDone = (state) => selectTasksState(state).hideDone;
+/* tylko flaga hideDone: false */
+
+export const selectAreTasksEmpty = (state) => selectTasks(state).length === 0;
+/* sprawdza, czy są jakieś zadania (długość tablicy (selectTasks)) */
+
+export const selectIsEveryTaskDone = (state) =>
+  selectTasks(state).every(({ done }) => done);
+/* wywołuje .every() na [] (selectTasks) - sprawdza, czy wszystkie są ukończone */
 
 export const selectLoading = (state) => selectTasksState(state).loading;
+
+export const getTaskById = (state, taskId) =>
+  selectTasks(state).find(({ id }) => id === taskId);
+
+export const selectTasksByQuery = (state, query) => {
+  const tasks = selectTasks(state);
+
+  if (!query || query.trim() === "") {
+    return tasks;
+  }
+
+  return tasks.filter(({ content }) =>
+    content.toUpperCase().includes(query.trim().toUpperCase()),
+  );
+};
 
 export default tasksSlice.reducer;

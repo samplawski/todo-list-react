@@ -1,13 +1,14 @@
-import Container from "../../common/Container";
-import Header from "../../common/Header";
-import Section from "../../common/Section";
+import Container from "../../../common/Container";
+import Header from "../../../common/Header";
+import Section from "../../../common/Section";
 import Form from "./Form";
 import TasksList from "./TasksList";
 import ExampleTasksButton from "./ExampleTasksButton";
 import Buttons from "./Buttons";
-import Footer from "../../common/Footer";
+import Footer from "../../../common/Footer";
+import Search from "./Search";
 
-function Tasks() {
+function TasksPage() {
   return (
     <Container>
       <Header title="Lista zadań" />
@@ -17,6 +18,8 @@ function Tasks() {
         extraHeaderContent={<ExampleTasksButton />}
         body={<Form />}
       />
+
+      <Section title="Szukaj zadania" body={<Search />} />
 
       <Section
         title="Lista zadań"
@@ -29,4 +32,4 @@ function Tasks() {
   );
 }
 
-export default Tasks;
+export default TasksPage;

@@ -6,7 +6,7 @@ import {
   selectAreTasksEmpty,
   selectIsEveryTaskDone,
   removeAllTasks
-} from "../tasksSlice.js";
+} from "../../tasksSlice.js";
 import { StyledButtons, HeadingButton } from "./styled.js";
 
 function Buttons() {

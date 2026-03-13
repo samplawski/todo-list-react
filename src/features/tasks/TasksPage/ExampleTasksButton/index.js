@@ -3,7 +3,7 @@ import {
   fetchExampleTasks,
   selectAreTasksEmpty,
   selectLoading,
-} from "../tasksSlice.js";
+} from "../../tasksSlice.js";
 import {
   StyledExampleTasksButton,
   HeadingExampleTasksButton,

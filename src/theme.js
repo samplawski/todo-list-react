@@ -10,6 +10,7 @@ export const theme = {
     footerBackground: "hsl(0, 100%, 99%)",
     footerLink: "hsl(182, 25%, 50%)",
     white: "hsl(0, 0%, 100%)",
+    red: "hsl(0, 100%, 50%)",
   },
 
   transition: {

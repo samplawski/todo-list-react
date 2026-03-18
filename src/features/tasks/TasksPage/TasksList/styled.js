@@ -46,11 +46,15 @@ export const Button = styled.button`
     filter: brightness(140%);
   }
 
-  ${({ $toggleDone }) => $toggleDone && css`
+  ${({ $toggleDone }) =>
+    $toggleDone &&
+    css`
       background: ${({ theme }) => theme.color.toggleDoneButton};
     `}
 
-  ${({ $remove }) => $remove && css`
+  ${({ $remove }) =>
+    $remove &&
+    css`
       background: ${({ theme }) => theme.color.deleteButton};
     `}
 `;

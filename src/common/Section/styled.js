@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledSection = styled.section`
   margin: 10px 0;
-  background: ${({ theme }) => theme.color.white};
+  background: ${({ theme }) => theme.color.elementBakground};
 `;
 
 export const Header = styled.header`

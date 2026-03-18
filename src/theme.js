@@ -1,16 +1,30 @@
+const colours = {
+  alto: "hsl(0, 0%, 87%)",
+  teal: "hsl(180, 100%, 25%)",
+  forestGreen: "hsl(120, 61%, 34%)",
+  crimson: "hsl(348, 83%, 47%)",
+  silverChalice: "hsl(0, 0%, 67%)",
+  white: "hsl(0, 0%, 100%)",
+  roseWhite: "hsl(0, 100%, 99%)",
+  breakerBay: "hsl(182, 25%, 50%)",
+  red: "rgb(255, 0, 0)",
+};
+
 export const theme = {
   color: {
-    background: "hsl(0, 0%, 87%)",
-    border: "hsl(0, 0%, 87%)",
-    taskButton: "hsl(180, 100%, 25%)",
-    toggleDoneButton: "hsl(120, 61%, 34%)",
-    deleteButton: "hsl(348, 83%, 47%)",
-    disabledButton: "hsl(0, 0%, 67%)",
-    buttonText: "hsl(0, 0%, 100%)",
-    footerBackground: "hsl(0, 100%, 99%)",
-    footerLink: "hsl(182, 25%, 50%)",
-    white: "hsl(0, 0%, 100%)",
-    red: "hsl(0, 100%, 50%)",
+    pageBackground: colours.alto,
+    elementBakground: colours.white,
+    border: colours.alto,
+    taskButton: colours.teal,
+    toggleDoneButton: colours.forestGreen,
+    deleteButton: colours.crimson,
+    disabledButton: colours.silverChalice,
+    buttonText: colours.white,
+    footerBackground: colours.roseWhite,
+    footerLink: colours.breakerBay,
+    navigationBackground: colours.teal,
+
+    red: colours.red,
   },
 
   transition: {

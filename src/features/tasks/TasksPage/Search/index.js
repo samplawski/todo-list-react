@@ -23,8 +23,9 @@ export default () => {
   return (
     <Wrapper>
       <Input
-        placeholder="Filtruj zadania"
         value={query || ""}
+        placeholder="Filtruj zadania"
+        title="Wpisz wyszukiwaną frazę / fragment tekstu."
         onChange={onInputChange}
       />
     </Wrapper>

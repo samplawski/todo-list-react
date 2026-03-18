@@ -46,7 +46,7 @@ const Form = () => {
         ref={inputRef}
         value={newTaskContent}
         placeholder="Co jest do zrobienia?"
-        title="Wpisz zadanie do wykonania"
+        title="Wpisz zadanie do wykonania."
         onChange={({ target }) => setNewTaskContent(target.value)}
       />
       <Button>Dodaj zadanie</Button>

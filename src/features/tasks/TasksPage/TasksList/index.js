@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import {
   toggleTaskDone,
   removeTask,
@@ -21,12 +21,21 @@ function TasksList() {
     <List>
       {tasks.map((task) => (
         <Item key={task.id} $hidden={task.done && hideDone}>
-          <Button $toggleDone onClick={() => dispatch(toggleTaskDone(task.id))}>
+          <Button
+            $toggleDone
+            title="Zaznacz jako ukończone"
+            onClick={() => dispatch(toggleTaskDone(task.id))}
+          >
             {task.done ? "✔" : ""}
           </Button>
 
           <Content $done={task.done}>
-            <StyledLink to={`/zadania/${task.id}`}>{task.content}</StyledLink>
+            <StyledLink
+              to={`/zadania/${task.id}`}
+              title="Kliknij, aby zobaczyć szczegóły."
+            >
+              {task.content}
+            </StyledLink>
           </Content>
 
           <Button $remove onClick={() => dispatch(removeTask(task.id))}>

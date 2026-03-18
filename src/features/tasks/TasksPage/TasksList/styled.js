@@ -1,9 +1,24 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const List = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${({theme}) => theme.color.taskButton};
+  transition: filter ${({theme}) => theme.transition.time};
+
+  &:hover {
+    filter: brightness(120%);
+  }
+
+  &:active {
+    filter: brightness(140%);
+  }
 `;
 
 export const Item = styled.li`
@@ -28,6 +43,8 @@ export const Content = styled.span`
       text-decoration: line-through;
     `}
 `;
+
+
 
 export const Button = styled.button`
   border: none;

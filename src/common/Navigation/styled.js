@@ -17,7 +17,7 @@ export const List = styled.ul`
   padding: 0;
   gap: 20px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMa}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
     flex-direction: column;
     align-items: center;
   }

@@ -1,6 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # Dokumenty i pliki tymczasowe
+repomix-output.txt
+repomix-output.xml
 lista zadań react - kod w plikach.docx
 lista zadań React-Redux - kod w plikach.docx
 

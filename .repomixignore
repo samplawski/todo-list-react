@@ -1,0 +1,27 @@
+# Pliki binarne i obrazy (AI ich nie "widzi" w tekście)
+public/*.png
+public/*.jpg
+public/*.ico
+public/*.svg
+
+# Standardowe pliki konfiguracyjne Reacta (rzadko edytowane)
+src/reportWebVitals.js
+src/setupTests.js
+public/robots.txt
+public/manifest.json
+
+# Pliki wyjściowe samego Repomixa (żeby nie zapętlić skanowania)
+repomix-output.txt
+repomix-output.xml
+lista zadań react - kod w plikach.docx
+lista zadań React-Redux - kod w plikach.docx
+
+# Logi i pliki tymczasowe
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+
+# Dokumentacja projektowa (jeśli nie chcesz jej wysyłać)
+*.docx
+*.pdf

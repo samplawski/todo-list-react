@@ -17,7 +17,7 @@ The Task List application focuses on clean code, modular architecture, and advan
 - **Data Persistence**: Tasks are automatically saved to and loaded from Local Storage.
 - **Dynamic ID Generation**: Uses `nanoid` to ensure unique identifiers for all tasks, even when fetched from external sources.
 - **State Management**: Advanced task management (add, remove, toggle status, set all as done).
-- **Filtering**: Ability to hide or show completed tasks.
+- **Filtering**: Search box allowing for filtering tasks by a given phrase, ability to hide or show completed tasks.
 - **Responsive Design**: Fully optimized for both desktop and mobile devices.
 - **Theming**: Centralized theme management (colors, breakpoints, transitions) using Styled Components.
 - **Interactive UI**: Smooth transitions, hover effects, and intuitive focus management.
@@ -38,6 +38,7 @@ The Task List application focuses on clean code, modular architecture, and advan
   - `useQueryParameter` for efficient reading specific values from the URL search string.
   - `useReplaceQueryParameter` for provideing a clean interface for updating the URL without cluttering the component logic.
 - **Redux-Saga**: Middleware for handling complex asynchronous side effects.
+- **React Router** Dom v5 (Routing & URL Params) - "about the author" page accessible via navigation pane 
 - **JavaScript ES6+**
 - **HTML5 & CSS3** (via Styled Components and Normalize.css)
 

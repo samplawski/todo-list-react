@@ -8,6 +8,7 @@ import {
 } from "../../tasksSlice.js";
 import { List, Item, Content, Button, StyledLink } from "./styled.js";
 import searchQueryParamName from "../searchQueryParamName.js";
+import { toTask } from "../../../../routes.js";
 
 function TasksList() {
   const location = useLocation();
@@ -31,7 +32,7 @@ function TasksList() {
 
           <Content $done={task.done}>
             <StyledLink
-              to={`/zadania/${task.id}`}
+              to={toTask({ id: task.id })}
               title="Kliknij, aby zobaczyć szczegóły."
             >
               {task.content}

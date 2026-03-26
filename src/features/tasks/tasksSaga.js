@@ -7,7 +7,16 @@ import {
   select,
 } from "redux-saga/effects";
 import { nanoid } from "@reduxjs/toolkit";
-import { fetchExampleTasks, selectTasks, setTasks } from "./tasksSlice";
+import {
+  addTask,
+  fetchExampleTasks,
+  removeAllTasks,
+  removeTask,
+  selectTasks,
+  setAllDone,
+  setTasks,
+  toggleTaskDone,
+} from "./tasksSlice";
 import { getExampleTasks } from "./getExampleTasks";
 import { saveTasksInLocalStorage } from "./tasksLocalStorage";
 
@@ -33,7 +42,16 @@ function* saveTasksInLocalStorageHandler() {
 }
 
 export function* tasksSaga() {
-  console.log("Saga jest podłączona.");
   yield takeLatest(fetchExampleTasks.type, fetchExmapleTasksHandler);
-  yield takeEvery("*", saveTasksInLocalStorageHandler);
+  yield takeEvery(
+    [
+      addTask.type,
+      removeAllTasks.type,
+      removeTask.type,
+      setAllDone.type,
+      setTasks.type,
+      toggleTaskDone.type,
+    ],
+    saveTasksInLocalStorageHandler,
+  );
 }

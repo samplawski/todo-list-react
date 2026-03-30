@@ -22,7 +22,7 @@ const AuthorPage = () => (
           </p>
           <p>
             Po powrocie z Anglii podjąłem przcę w Atos Polska. Najpierw jako
-            pierwsza linia wsparcia końcowego użytkownika, a następnie jako
+            pierwsza linia wsparcia końcowego użytkownika, a następnie jako{" "}
             <i>inżynier/analityk</i> <strong>NexThink</strong>. NexThink, to
             narzędzie służące do badania i analizy dużych środowisk (5000+
             komputerów) w czasie rzeczywistym pod kątem zrozumienia jak

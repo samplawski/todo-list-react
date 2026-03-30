@@ -14,7 +14,7 @@ The Task List application focuses on clean code, modular architecture, and advan
 
 - **Global State Management**: Powered by Redux Toolkit for predictable and centralized data flow.
 - **Asynchronous Operations**: Uses **Redux-Saga** to handle side effects, such as fetching example tasks from a JSON file with a simulated loading state.
-- **Data Persistence**: Tasks are automatically saved to and loaded from Local Storage.
+- **Data Persistence**: Automatic synchronization with Local Storage, optimized to trigger only on relevant state changes.
 - **Declarative Navigation**: Separate views for Task List, Task Details (using URL parameters), and an Author page.
 - **Dynamic ID Generation**: Uses `nanoid` to ensure unique identifiers for all tasks, even when fetched from external sources.
 - **State Management**: Advanced task management (add, remove, toggle status, and bulk actions - complete all, remove all).
@@ -22,6 +22,7 @@ The Task List application focuses on clean code, modular architecture, and advan
 - **Responsive Design**: Fully optimized for both desktop and mobile devices.
 - **Theming**: Centralized theme management (colors, breakpoints, transitions) using Styled Components.
 - **Interactive UI**: Smooth transitions, hover effects, and intuitive focus management.
+- **Centralized Routing**: All application paths are managed in a single source of truth (routes.js).
 
 ## 3. Technologies Used
 

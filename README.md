@@ -13,11 +13,12 @@ The Task List application focuses on clean code, modular architecture, and advan
 ## 2. Features
 
 - **Global State Management**: Powered by Redux Toolkit for predictable and centralized data flow.
-- **Asynchronous Operations**: Uses **Redux-Saga** to handle side effects, such as fetching example tasks from a JSON file.
+- **Asynchronous Operations**: Uses **Redux-Saga** to handle side effects, such as fetching example tasks from a JSON file with a simulated loading state.
 - **Data Persistence**: Tasks are automatically saved to and loaded from Local Storage.
+- **Declarative Navigation**: Separate views for Task List, Task Details (using URL parameters), and an Author page.
 - **Dynamic ID Generation**: Uses `nanoid` to ensure unique identifiers for all tasks, even when fetched from external sources.
-- **State Management**: Advanced task management (add, remove, toggle status, set all as done).
-- **Filtering**: Search box allowing for filtering tasks by a given phrase, ability to hide or show completed tasks.
+- **State Management**: Advanced task management (add, remove, toggle status, and bulk actions - complete all, remove all).
+- **Filtering**: Search box allowing for filtering tasks by a given phrase.
 - **Responsive Design**: Fully optimized for both desktop and mobile devices.
 - **Theming**: Centralized theme management (colors, breakpoints, transitions) using Styled Components.
 - **Interactive UI**: Smooth transitions, hover effects, and intuitive focus management.
@@ -62,6 +63,11 @@ The application will launch and open automatically in your browser at http://loc
 4. To mark a task as completed, click on the green checkbox next to the task.
 5. To remove a task from the list, click on the red "Bin" button next to the task.
 6. Use the control buttons above the list to manage task visibility or mark all tasks as finished instantly.
+7. Available Scripts: 
+  - npm start: Runs the app in development mode,
+  - npm run build: Builds the app for production,
+  - npm run deploy: Deploys the production build to GitHub Pages,
+  - npm run repomix: Generates a packed representation of the codebase (using --style plain).
 
 ## 6. Status and Contributions
 
